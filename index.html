@@ -5,9 +5,106 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout</title>
+  <link rel="shortcut icon" href="images/devchallenges.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-  
+  <div class="page">
+    <main>
+      <div class="form">
+        <h1>Checkout</h1>
+
+        <form action="" method="post">
+          <h2>Contact infomation</h2>
+          <div class="form-row">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email...">
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your phone..">
+          </div>
+
+          <h2>Shipping address</h2>
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name..">
+          </div>
+
+          <div class="form-row">
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" placeholder="Your address..">
+          </div>
+
+          <div class="form-row">
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" placeholder="Your city..">
+          </div>
+
+          <div class="address">
+            <div class="form-row">
+              <label for="country">Country</label>
+              <select name="country" id="country">
+                <option value="eg">Egypt</option>
+                <option value="us">United states of america</option>
+                <option value="uk">United kingdom</option>
+              </select>   
+            </div>
+
+            <div class="form-row">
+              <label for="postal-code"></label>
+              <input type="number" name="postalCode" id="postal-code">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="checkbox"></label>
+            <input type="checkbox" name="save" id="checkbox">
+          </div>
+
+          <input type="submit" value="Continue">
+        </form>
+      </div>
+
+      <aside class="description">
+        <div class="product">
+          <img src="images/photo1.png" alt="product1">
+          <div class="info">
+            <p class="title">Vintage Backbag</p>
+            <p class="price">$54.99</p>
+            <span class="old-price">$94.99</span>
+            <input type="number" name="amount1">
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/photo1.png" alt="product1">
+          <div class="info">
+            <p class="title">Vintage Backbag</p>
+            <p class="price">$54.99</p>
+            <span class="old-price">$94.99</span>
+            <input type="number" name="amount1">
+          </div>
+        </div>
+
+        <div class="full-info">
+          <div>
+            <p class="title">Shipping</p>
+            <p class="value">$19</p>
+          </div>
+          <hr />
+          <div>
+            <p class="title">Total</p>
+            <p class="value">$148.98</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>created by <a href="https://devchallenges.io/portfolio/AboodIbrahim">AboodIbrahim</a> - devChallenges.io</p>
+    </footer>
+  </div>
 </body>
 </html>
