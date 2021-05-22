@@ -8,86 +8,116 @@
   <link rel="shortcut icon" href="images/devchallenges.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style/style.css">
+  <script defer src="js/script.js"></script>
 </head>
 <body>
   <div class="page">
-    <main>
-      <div class="form">
-        <h1>Checkout</h1>
+    <h1>Checkout</h1>
 
+    <main>
+      <section class="form">
         <form action="" method="post">
           <h2>Contact infomation</h2>
           <div class="form-row">
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Enter your email...">
+            <div class="input-wrapper">
+              <input type="email" name="email" id="email" placeholder="Enter your email...">
+            </div>
           </div>
-
+  
           <div class="form-row">
             <label for="phone">Phone</label>
-            <input type="tel" name="phone" id="phone" placeholder="Enter your phone..">
+            <div class="input-wrapper">
+              <input type="tel" name="phone" id="phone" placeholder="Enter your phone..">
+            </div>
           </div>
-
+  
           <h2>Shipping address</h2>
           <div class="form-row">
             <label for="name">Full name</label>
-            <input type="text" name="name" id="name" placeholder="Enter your name..">
+            <div class="input-wrapper">
+              <input type="text" name="name" id="name" placeholder="Enter your name..">
+            </div>
           </div>
-
+  
           <div class="form-row">
             <label for="address">Address</label>
-            <input type="text" name="address" id="address" placeholder="Your address..">
+            <div class="input-wrapper">
+              <input type="text" name="address" id="address" placeholder="Your address..">
+            </div>
           </div>
-
+  
           <div class="form-row">
             <label for="city">City</label>
-            <input type="text" name="city" id="city" placeholder="Your city..">
+            <div class="input-wrapper">
+              <input type="text" name="city" id="city" placeholder="Your city..">
+            </div>
           </div>
-
+  
           <div class="address">
             <div class="form-row">
               <label for="country">Country</label>
-              <select name="country" id="country">
-                <option value="eg">Egypt</option>
-                <option value="us">United states of america</option>
-                <option value="uk">United kingdom</option>
-              </select>   
+              <div class="input-wrapper">
+                <select name="country" id="country">
+                  <option selected>Your country</option>
+                  <option value="eg">Egypt</option>
+                  <option value="us">United states of america</option>
+                  <option value="uk">United kingdom</option>
+                </select>   
+              </div>
             </div>
-
+  
             <div class="form-row">
-              <label for="postal-code"></label>
-              <input type="number" name="postalCode" id="postal-code">
+              <label for="postal-code">Postal code</label>
+              <div class="input-wrapper">
+                <input type="number" name="postalCode" id="postal-code" placeholder="Your postal code...">
+              </div>
             </div>
           </div>
-
-          <div class="form-row">
-            <label for="checkbox"></label>
+  
+          <div class="form-row checkbox">
+            <label for="checkbox">Save this information for next time</label>
             <input type="checkbox" name="save" id="checkbox">
           </div>
-
+  
           <input type="submit" value="Continue">
         </form>
-      </div>
-
+      </section>
+  
       <aside class="description">
         <div class="product">
           <img src="images/photo1.png" alt="product1">
           <div class="info">
             <p class="title">Vintage Backbag</p>
-            <p class="price">$54.99</p>
-            <span class="old-price">$94.99</span>
-            <input type="number" name="amount1">
+            <div class="price">
+              <p class="new-price">$54.99</p>
+              <p class="old-price">$94.99</p>
+            </div>
+            <div class="quantity-input">
+              <span class="down">remove</span>
+              <p class="value">1</p>
+              <span class="up">add</span>
+              <input type="hidden" name="quantity1" value="1">
+            </div>
           </div>
         </div>
         <div class="product">
           <img src="images/photo1.png" alt="product1">
           <div class="info">
             <p class="title">Vintage Backbag</p>
-            <p class="price">$54.99</p>
-            <span class="old-price">$94.99</span>
-            <input type="number" name="amount1">
+            <div class="price">
+              <p class="new-price">$54.99</p>
+              <p class="old-price">$94.99</p>
+            </div>
+            <div class="quantity-input">
+              <span class="down">remove</span>
+              <p class="value">1</p>
+              <span class="up">add</span>
+              <input type="hidden" name="quantity1" value="1">
+            </div>
           </div>
         </div>
-
+  
         <div class="full-info">
           <div>
             <p class="title">Shipping</p>

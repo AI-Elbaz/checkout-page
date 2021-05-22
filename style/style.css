@@ -17,28 +17,236 @@
     box-sizing: border-box;
 }
 
-.page {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 100vh;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
 
+.page {
+    min-height: 100vh;
+    padding: 0 12px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: var(--gray-4);
+}
+
 h1 {
-    color: #4E5150;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 1.22em;
+    color: var(--primary);
+    margin: 30px 0 20px 0;
+}
+
+h2 {
+    font-size: 14px;
+    line-height: 1.22em;
+    color: var(--gray-1);
+    margin: 40px 0 12px 0;
+}
+
+.description {
+    width: 100%;
+    background-color: var(--gray-6);
+    padding: 30px 25px 20px;
+    border-radius: 12px;
+}
+
+.product {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.product .title {
+    font-size: 12px;
+    line-height: 1.22em;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.product .price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product .new-price {
+    font-size: 14px;
+    line-height: 1.22em;
+    color: var(--orange);
+    margin-right: 15px;
+}
+
+.product .old-price {
+    font-size: 10px;
+    line-height: 1.22em;
+    color: var(--primary);
+    text-decoration: line-through;
+}
+
+.product img {
+    width: 122px;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+
+.quantity-input {
+    border: 1px solid var(--gray-3);
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.quantity-input .value {
+    margin: 0 25px;
+}
+
+.quantity-input span {
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 4px;
+    color: var(--gray-3);
+    font-family: 'Material Icons';
+    background-color: var(--gray-5);
+}
+
+.description .full-info {
+    border-top: 1px solid var(--gray-4);
+    margin-top: 87px;
+}
+
+.full-info > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.full-info :is(.title, .value) {
+    font-size: 14px;
+    line-height: 1.22em;
+    color: var(--gray-1);
+}
+
+.form {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+form label {
+    font-size: 10px;
+    line-height: 1.22em;
+    color: var(--gray-2);
+    margin-bottom: 5px;
+}
+
+.input-wrapper {
+    display: flex;
+    padding: 12px;
+    border-radius: 12px;
+    color: var(--gray-3);
+    border: 1px solid var(--gray-3);
+}
+
+.input-wrapper::before {
+    content: attr(data-icon);
+    font-size: 16px;
+    margin-right: 12px;
+    color: var(--gray-3);
+    font-family: 'Material Icons';
+}
+
+form :is(input:not(input[type="checkbox"], input[type="submit"]), select) {
+    width: 100%;
+    border: none;
+    line-height: 1.22em;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+form > .address {
+    display: flex;
+    gap: 20px;
+}
+
+.address > .form-row {
+    flex: 1 1 100%;
+}
+
+.form-row.checkbox{
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.form-row.form-row.checkbox label {
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    appearance: none;
+    margin-right: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--gray-3);
+    font-family: 'Material Icons';
+}
+
+input[type="checkbox"]:checked {
+    border-color: var(--orange);
+}
+
+input[type="checkbox"]:checked::before {
+    content: 'done';
+    color: #F2F2F2;
+    background-color: var(--orange);
+}
+
+input[type="submit"] {
+    padding: 17px 45px;
+    background-color: var(--orange);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.22em;
+    border: none;
+    align-self: flex-end;
+    margin-top: 4px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 footer {
-    color: #BDBDBD;
+    color: var(--gray-4);
     font-size: 14px;
     font-weight: 500;
     padding: 24px 0;
+    margin-top: 100px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
@@ -46,6 +254,6 @@ footer {
 footer a,
 footer a:link,
 footer a:visited {
-    color: #BDBDBD;
+    color: var(--gray-4);
     font-weight: bold;
 }
