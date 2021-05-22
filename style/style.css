@@ -4,10 +4,12 @@
     --gray-1: #333333;
     --gray-2: #4F4F4F;
     --gray-3: #828282;
-    --gray-4: #BDBDBD; /* footer and divider */
+    --gray-4: #BDBDBD;
     --gray-5: #E0E0E0;
     --gray-6: #F2F2F2;
     --orange: #F2994A;
+    --btn-hover: #fda95e;
+    --btn-active: #ff9232;
     --primary: #4E5150;
 }
 
@@ -22,15 +24,25 @@ body {
     font-weight: 600;
 }
 
-.page {
-    min-height: 100vh;
+.container {
+    display: flex;
     padding: 0 12px;
+    justify-content: center;
+}
+
+.page {
+    width: 100%;
+    max-width: 960px;
+    min-height: 100vh;
+    padding: 32px 0 0;
 }
 
 main {
     width: 100%;
     display: flex;
     flex-wrap: wrap-reverse;
+    align-items: self-end;
+    justify-content: space-between;
 }
 
 hr {
@@ -43,14 +55,14 @@ h1 {
     font-size: 24px;
     line-height: 1.22em;
     color: var(--primary);
-    margin: 30px 0 20px 0;
+    margin-bottom: 20px;
 }
 
 h2 {
     font-size: 14px;
     line-height: 1.22em;
     color: var(--gray-1);
-    margin: 40px 0 12px 0;
+    margin: 40px 0 12px;
 }
 
 .description {
@@ -128,8 +140,9 @@ h2 {
 
 .full-info > div {
     display: flex;
-    justify-content: space-between;
     padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .full-info :is(.title, .value) {
@@ -163,6 +176,7 @@ form label {
 .input-wrapper {
     display: flex;
     padding: 12px;
+    align-items: center;
     border-radius: 12px;
     color: var(--gray-3);
     border: 1px solid var(--gray-3);
@@ -181,6 +195,7 @@ form :is(input:not(input[type="checkbox"], input[type="submit"]), select) {
     border: none;
     line-height: 1.22em;
     font-size: 12px;
+    color: var(--primary);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -214,18 +229,19 @@ input[type="checkbox"] {
     appearance: none;
     margin-right: 8px;
     border-radius: 4px;
+    text-align: center;
     border: 1px solid var(--gray-3);
     font-family: 'Material Icons';
 }
 
 input[type="checkbox"]:checked {
     border-color: var(--orange);
+    background-color: var(--orange);
 }
 
 input[type="checkbox"]:checked::before {
     content: 'done';
     color: #F2F2F2;
-    background-color: var(--orange);
 }
 
 input[type="submit"] {
@@ -238,7 +254,16 @@ input[type="submit"] {
     border: none;
     align-self: flex-end;
     margin-top: 4px;
+    cursor: pointer;
     font-family: 'Montserrat', sans-serif;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--btn-hover);
+}
+
+input[type="submit"]:active {
+    background-color: var(--btn-active);
 }
 
 footer {
@@ -256,4 +281,74 @@ footer a:link,
 footer a:visited {
     color: var(--gray-4);
     font-weight: bold;
+}
+
+@media only screen and (min-width: 900px) {
+    .page {
+        padding: 64px 0 0;
+    }
+
+    .form {
+        width: 465px;
+    }
+
+    .description {
+        width: 380px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin: 50px 0 15px;
+    }
+
+    form label {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+
+    form .form-row {
+        margin-bottom: 20px;
+    }
+
+    .input-wrapper {
+        padding: 18px;
+    }
+
+    form :is(input, select) {
+        font-size: 16px !important;
+    }
+
+    .input-wrapper::before {
+        font-size: 18px;
+    }
+
+    .product .title {
+        font-size: 16px;
+    }
+
+    .product .new-price {
+        font-size: 16px;
+    }
+
+    .product .old-price {
+        font-size: 12px;
+    }
+
+    .full-info .title {
+        font-size: 18px;
+    }
+
+    input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        margin-right: 11px;
+    }
+
+    input[type="checkbox"]:checked::before {
+        font-size: 18px;
+    }
 }

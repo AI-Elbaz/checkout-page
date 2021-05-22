@@ -11,130 +11,131 @@
   <script defer src="js/script.js"></script>
 </head>
 <body>
-  <div class="page">
-    <h1>Checkout</h1>
-
-    <main>
-      <section class="form">
-        <form action="" method="post">
-          <h2>Contact infomation</h2>
-          <div class="form-row">
-            <label for="email">E-mail</label>
-            <div class="input-wrapper">
-              <input type="email" name="email" id="email" placeholder="Enter your email...">
-            </div>
-          </div>
-  
-          <div class="form-row">
-            <label for="phone">Phone</label>
-            <div class="input-wrapper">
-              <input type="tel" name="phone" id="phone" placeholder="Enter your phone..">
-            </div>
-          </div>
-  
-          <h2>Shipping address</h2>
-          <div class="form-row">
-            <label for="name">Full name</label>
-            <div class="input-wrapper">
-              <input type="text" name="name" id="name" placeholder="Enter your name..">
-            </div>
-          </div>
-  
-          <div class="form-row">
-            <label for="address">Address</label>
-            <div class="input-wrapper">
-              <input type="text" name="address" id="address" placeholder="Your address..">
-            </div>
-          </div>
-  
-          <div class="form-row">
-            <label for="city">City</label>
-            <div class="input-wrapper">
-              <input type="text" name="city" id="city" placeholder="Your city..">
-            </div>
-          </div>
-  
-          <div class="address">
+  <div class="container">
+    <div class="page">
+      <h1>Checkout</h1>
+      <main>
+        <section class="form">
+          <form action="" method="post">
+            <h2>Contact infomation</h2>
             <div class="form-row">
-              <label for="country">Country</label>
+              <label for="email">E-mail</label>
               <div class="input-wrapper">
-                <select name="country" id="country">
-                  <option selected>Your country</option>
-                  <option value="eg">Egypt</option>
-                  <option value="us">United states of america</option>
-                  <option value="uk">United kingdom</option>
-                </select>   
+                <input type="email" name="email" id="email" placeholder="Enter your email...">
               </div>
             </div>
-  
+    
             <div class="form-row">
-              <label for="postal-code">Postal code</label>
+              <label for="phone">Phone</label>
               <div class="input-wrapper">
-                <input type="number" name="postalCode" id="postal-code" placeholder="Your postal code...">
+                <input type="tel" name="phone" id="phone" placeholder="Enter your phone..">
+              </div>
+            </div>
+    
+            <h2>Shipping address</h2>
+            <div class="form-row">
+              <label for="name">Full name</label>
+              <div class="input-wrapper">
+                <input type="text" name="name" id="name" placeholder="Enter your name..">
+              </div>
+            </div>
+    
+            <div class="form-row">
+              <label for="address">Address</label>
+              <div class="input-wrapper">
+                <input type="text" name="address" id="address" placeholder="Your address..">
+              </div>
+            </div>
+    
+            <div class="form-row">
+              <label for="city">City</label>
+              <div class="input-wrapper">
+                <input type="text" name="city" id="city" placeholder="Your city..">
+              </div>
+            </div>
+    
+            <div class="address">
+              <div class="form-row">
+                <label for="country">Country</label>
+                <div class="input-wrapper">
+                  <select name="country" id="country">
+                    <option selected>Your country</option>
+                    <option value="eg">Egypt</option>
+                    <option value="us">United states of america</option>
+                    <option value="uk">United kingdom</option>
+                  </select>   
+                </div>
+              </div>
+    
+              <div class="form-row">
+                <label for="postal-code">Postal code</label>
+                <div class="input-wrapper">
+                  <input type="number" name="postalCode" id="postal-code" placeholder="Your postal code..." min="1">
+                </div>
+              </div>
+            </div>
+    
+            <div class="form-row checkbox">
+              <label for="checkbox">Save this information for next time</label>
+              <input type="checkbox" name="save" id="checkbox">
+            </div>
+    
+            <input type="submit" value="Continue">
+          </form>
+        </section>
+    
+        <aside class="description">
+          <div class="product">
+            <img src="images/photo1.png" alt="product1">
+            <div class="info">
+              <p class="title">Vintage Backbag</p>
+              <div class="price">
+                <p class="new-price">$54.99</p>
+                <p class="old-price">$94.99</p>
+              </div>
+              <div class="quantity-input">
+                <span class="down">remove</span>
+                <p class="value">1</p>
+                <span class="up">add</span>
+                <input type="hidden" name="quantity1" value="1">
               </div>
             </div>
           </div>
-  
-          <div class="form-row checkbox">
-            <label for="checkbox">Save this information for next time</label>
-            <input type="checkbox" name="save" id="checkbox">
-          </div>
-  
-          <input type="submit" value="Continue">
-        </form>
-      </section>
-  
-      <aside class="description">
-        <div class="product">
-          <img src="images/photo1.png" alt="product1">
-          <div class="info">
-            <p class="title">Vintage Backbag</p>
-            <div class="price">
-              <p class="new-price">$54.99</p>
-              <p class="old-price">$94.99</p>
-            </div>
-            <div class="quantity-input">
-              <span class="down">remove</span>
-              <p class="value">1</p>
-              <span class="up">add</span>
-              <input type="hidden" name="quantity1" value="1">
+          <div class="product">
+            <img src="images/photo2.png" alt="product2">
+            <div class="info">
+              <p class="title">Vintage Backbag</p>
+              <div class="price">
+                <p class="new-price">$54.99</p>
+                <p class="old-price">$94.99</p>
+              </div>
+              <div class="quantity-input">
+                <span class="down">remove</span>
+                <p class="value">1</p>
+                <span class="up">add</span>
+                <input type="hidden" name="quantity1" value="1">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="product">
-          <img src="images/photo1.png" alt="product1">
-          <div class="info">
-            <p class="title">Vintage Backbag</p>
-            <div class="price">
-              <p class="new-price">$54.99</p>
-              <p class="old-price">$94.99</p>
+    
+          <div class="full-info">
+            <div>
+              <p class="title">Shipping</p>
+              <p class="value">$19</p>
             </div>
-            <div class="quantity-input">
-              <span class="down">remove</span>
-              <p class="value">1</p>
-              <span class="up">add</span>
-              <input type="hidden" name="quantity1" value="1">
+            <hr />
+            <div>
+              <p class="title">Total</p>
+              <p class="value">$148.98</p>
             </div>
           </div>
-        </div>
-  
-        <div class="full-info">
-          <div>
-            <p class="title">Shipping</p>
-            <p class="value">$19</p>
-          </div>
-          <hr />
-          <div>
-            <p class="title">Total</p>
-            <p class="value">$148.98</p>
-          </div>
-        </div>
-      </aside>
-    </main>
+        </aside>
+      </main>
 
-    <footer>
-      <p>created by <a href="https://devchallenges.io/portfolio/AboodIbrahim">AboodIbrahim</a> - devChallenges.io</p>
-    </footer>
+      <footer>
+        <p>created by <a href="https://devchallenges.io/portfolio/AboodIbrahim">AboodIbrahim</a> - devChallenges.io</p>
+      </footer>
+    </div>
   </div>
 </body>
 </html>

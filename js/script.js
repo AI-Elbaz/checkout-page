@@ -6,7 +6,7 @@ let icons = {
     name: 'account_circle',
     address: 'home',
     city: 'location_city',
-    country: 'location_city',
+    country: 'public',
     postalCode: 'markunread_mailbox',
 };
 
