@@ -35,7 +35,7 @@
 
 ## Overview
 
-![screenshot](images/preview)
+![screenshot](images/preview.png)
 
 basically every online store has its own checkout page, here i made one
 
